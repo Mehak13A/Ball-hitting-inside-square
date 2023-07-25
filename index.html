@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ball animation</title>
+</head>
+<style>
+    #ball_hit {
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    background-color: blanchedalmond;
+}
+
+#ball {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: brown;
+    position: absolute;
+    animation: moveX 2s linear infinite alternate,
+               moveY 3s linear infinite alternate;
+}
+
+@keyframes moveX {
+    from { 
+        left: 0;
+        background-color: brown;
+    }
+    to { 
+        left: 500px;
+        background-color: rgb(235, 235, 242);
+    }
+}
+
+@keyframes moveY {
+    from { 
+        top: 0;
+        background-color: brown;
+    }
+    to { 
+        top: 500px;
+        background-color: rgb(128, 255, 0);
+    }
+}
+
+</style>
+<body>
+    <div id="ball_hit">
+       <div id="ball"> </div>
+    </div>
+</body>
+</html>
